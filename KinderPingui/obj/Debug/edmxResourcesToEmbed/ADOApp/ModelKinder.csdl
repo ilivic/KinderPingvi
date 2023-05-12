@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KinderPingviModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DiskS">
+    <Key>
+      <PropertyRef Name="id_Disk" />
+    </Key>
+    <Property Name="id_Disk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="countOrder" Type="Int32" Nullable="false" />
+    <Property Name="User_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_DiskS_Users" FromRole="DiskS" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="ItemOrder">
+    <Key>
+      <PropertyRef Name="id_ItemOrder" />
+    </Key>
+    <Property Name="id_ItemOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Item_id" Type="Int32" Nullable="false" />
+    <Property Name="Order_id" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TypeItems_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Items" Relationship="Self.FK_ItemOrder_Items" FromRole="ItemOrder" ToRole="Items" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_ItemOrder_Orders" FromRole="ItemOrder" ToRole="Orders" />
+    <NavigationProperty Name="TypeItems" Relationship="Self.FK_ItemOrder_TypeItems" FromRole="ItemOrder" ToRole="TypeItems" />
+  </EntityType>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="Id_item" />
+    </Key>
+    <Property Name="Id_item" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="ItemOrder" Relationship="Self.FK_ItemOrder_Items" FromRole="Items" ToRole="ItemOrder" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="id_order" />
+    </Key>
+    <Property Name="id_order" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price_id" Type="Int32" Nullable="false" />
+    <Property Name="User_id_Client" Type="Int32" Nullable="false" />
+    <Property Name="User_id_Worker" Type="Int32" Nullable="false" />
+    <Property Name="TypeOrder_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ItemOrder" Relationship="Self.FK_ItemOrder_Orders" FromRole="Orders" ToRole="ItemOrder" />
+    <NavigationProperty Name="TypeOrders" Relationship="Self.FK_Orders_TypeOrders" FromRole="Orders" ToRole="TypeOrders" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Orders_Users" FromRole="Orders" ToRole="Users" />
+    <NavigationProperty Name="Users1" Relationship="Self.FK_Orders_Users1" FromRole="Orders" ToRole="Users" />
+    <NavigationProperty Name="PriceListOrder" Relationship="Self.FK_PriceListOrder_Orders" FromRole="Orders" ToRole="PriceListOrder" />
+  </EntityType>
+  <EntityType Name="PriceList">
+    <Key>
+      <PropertyRef Name="id_Price" />
+    </Key>
+    <Property Name="id_Price" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="PriceListOrder" Relationship="Self.FK_PriceListOrder_PriceList" FromRole="PriceList" ToRole="PriceListOrder" />
+  </EntityType>
+  <EntityType Name="PriceListOrder">
+    <Key>
+      <PropertyRef Name="id_PriceOrder" />
+    </Key>
+    <Property Name="id_PriceOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Order_id" Type="Int32" Nullable="false" />
+    <Property Name="Price_id" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_PriceListOrder_Orders" FromRole="PriceListOrder" ToRole="Orders" />
+    <NavigationProperty Name="PriceList" Relationship="Self.FK_PriceListOrder_PriceList" FromRole="PriceListOrder" ToRole="PriceList" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id_role" />
+    </Key>
+    <Property Name="Id_role" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Roles" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="TypeItems">
+    <Key>
+      <PropertyRef Name="id_typeItem" />
+    </Key>
+    <Property Name="id_typeItem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ItemOrder" Relationship="Self.FK_ItemOrder_TypeItems" FromRole="TypeItems" ToRole="ItemOrder" />
+  </EntityType>
+  <EntityType Name="TypeOrders">
+    <Key>
+      <PropertyRef Name="id_typeOrder" />
+    </Key>
+    <Property Name="id_typeOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_TypeOrders" FromRole="TypeOrders" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id_User" />
+    </Key>
+    <Property Name="Id_User" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Role_id" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DiskS" Relationship="Self.FK_DiskS_Users" FromRole="Users" ToRole="DiskS" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Users" FromRole="Users" ToRole="Orders" />
+    <NavigationProperty Name="Orders1" Relationship="Self.FK_Orders_Users1" FromRole="Users" ToRole="Orders" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
+  </EntityType>
+  <Association Name="FK_DiskS_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="DiskS" Type="Self.DiskS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id_User" />
+      </Principal>
+      <Dependent Role="DiskS">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemOrder_Items">
+    <End Role="Items" Type="Self.Items" Multiplicity="1" />
+    <End Role="ItemOrder" Type="Self.ItemOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="Id_item" />
+      </Principal>
+      <Dependent Role="ItemOrder">
+        <PropertyRef Name="Item_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemOrder_Orders">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="ItemOrder" Type="Self.ItemOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="id_order" />
+      </Principal>
+      <Dependent Role="ItemOrder">
+        <PropertyRef Name="Order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemOrder_TypeItems">
+    <End Role="TypeItems" Type="Self.TypeItems" Multiplicity="1" />
+    <End Role="ItemOrder" Type="Self.ItemOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeItems">
+        <PropertyRef Name="id_typeItem" />
+      </Principal>
+      <Dependent Role="ItemOrder">
+        <PropertyRef Name="TypeItems_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_TypeOrders">
+    <End Role="TypeOrders" Type="Self.TypeOrders" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOrders">
+        <PropertyRef Name="id_typeOrder" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="TypeOrder_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id_User" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="User_id_Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Users1">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id_User" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="User_id_Worker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PriceListOrder_Orders">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="PriceListOrder" Type="Self.PriceListOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="id_order" />
+      </Principal>
+      <Dependent Role="PriceListOrder">
+        <PropertyRef Name="Order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PriceListOrder_PriceList">
+    <End Role="PriceList" Type="Self.PriceList" Multiplicity="1" />
+    <End Role="PriceListOrder" Type="Self.PriceListOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceList">
+        <PropertyRef Name="id_Price" />
+      </Principal>
+      <Dependent Role="PriceListOrder">
+        <PropertyRef Name="Price_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id_role" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="Role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KinderPingviEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DiskS" EntityType="Self.DiskS" />
+    <EntitySet Name="ItemOrder" EntityType="Self.ItemOrder" />
+    <EntitySet Name="Items" EntityType="Self.Items" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" />
+    <EntitySet Name="PriceList" EntityType="Self.PriceList" />
+    <EntitySet Name="PriceListOrder" EntityType="Self.PriceListOrder" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="TypeItems" EntityType="Self.TypeItems" />
+    <EntitySet Name="TypeOrders" EntityType="Self.TypeOrders" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_DiskS_Users" Association="Self.FK_DiskS_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="DiskS" EntitySet="DiskS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemOrder_Items" Association="Self.FK_ItemOrder_Items">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="ItemOrder" EntitySet="ItemOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemOrder_Orders" Association="Self.FK_ItemOrder_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="ItemOrder" EntitySet="ItemOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemOrder_TypeItems" Association="Self.FK_ItemOrder_TypeItems">
+      <End Role="TypeItems" EntitySet="TypeItems" />
+      <End Role="ItemOrder" EntitySet="ItemOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_TypeOrders" Association="Self.FK_Orders_TypeOrders">
+      <End Role="TypeOrders" EntitySet="TypeOrders" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Users" Association="Self.FK_Orders_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Users1" Association="Self.FK_Orders_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PriceListOrder_Orders" Association="Self.FK_PriceListOrder_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="PriceListOrder" EntitySet="PriceListOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PriceListOrder_PriceList" Association="Self.FK_PriceListOrder_PriceList">
+      <End Role="PriceList" EntitySet="PriceList" />
+      <End Role="PriceListOrder" EntitySet="PriceListOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

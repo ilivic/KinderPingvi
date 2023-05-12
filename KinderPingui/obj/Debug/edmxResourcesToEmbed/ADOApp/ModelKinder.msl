@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище KinderPingviModelContainer" CdmEntityContainer="KinderPingviEntities">
+    <EntitySetMapping Name="DiskS">
+      <EntityTypeMapping TypeName="KinderPingviModel.DiskS">
+        <MappingFragment StoreEntitySet="DiskS">
+          <ScalarProperty Name="id_Disk" ColumnName="id_Disk" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="countOrder" ColumnName="countOrder" />
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemOrder">
+      <EntityTypeMapping TypeName="KinderPingviModel.ItemOrder">
+        <MappingFragment StoreEntitySet="ItemOrder">
+          <ScalarProperty Name="id_ItemOrder" ColumnName="id_ItemOrder" />
+          <ScalarProperty Name="Item_id" ColumnName="Item_id" />
+          <ScalarProperty Name="Order_id" ColumnName="Order_id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="TypeItems_id" ColumnName="TypeItems_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="KinderPingviModel.Items">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="Id_item" ColumnName="Id_item" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="KinderPingviModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="id_order" ColumnName="id_order" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Price_id" ColumnName="Price_id" />
+          <ScalarProperty Name="User_id_Client" ColumnName="User_id_Client" />
+          <ScalarProperty Name="User_id_Worker" ColumnName="User_id_Worker" />
+          <ScalarProperty Name="TypeOrder_id" ColumnName="TypeOrder_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PriceList">
+      <EntityTypeMapping TypeName="KinderPingviModel.PriceList">
+        <MappingFragment StoreEntitySet="PriceList">
+          <ScalarProperty Name="id_Price" ColumnName="id_Price" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PriceListOrder">
+      <EntityTypeMapping TypeName="KinderPingviModel.PriceListOrder">
+        <MappingFragment StoreEntitySet="PriceListOrder">
+          <ScalarProperty Name="id_PriceOrder" ColumnName="id_PriceOrder" />
+          <ScalarProperty Name="Order_id" ColumnName="Order_id" />
+          <ScalarProperty Name="Price_id" ColumnName="Price_id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="KinderPingviModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Id_role" ColumnName="Id_role" />
+          <ScalarProperty Name="title" ColumnName="title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeItems">
+      <EntityTypeMapping TypeName="KinderPingviModel.TypeItems">
+        <MappingFragment StoreEntitySet="TypeItems">
+          <ScalarProperty Name="id_typeItem" ColumnName="id_typeItem" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeOrders">
+      <EntityTypeMapping TypeName="KinderPingviModel.TypeOrders">
+        <MappingFragment StoreEntitySet="TypeOrders">
+          <ScalarProperty Name="id_typeOrder" ColumnName="id_typeOrder" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="KinderPingviModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id_User" ColumnName="Id_User" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Role_id" ColumnName="Role_id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

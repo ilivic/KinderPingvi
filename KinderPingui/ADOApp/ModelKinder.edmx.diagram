@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="22278fe866c74d259d37b8a5f9afe43f" Name="Diagram1">
+        <EntityTypeShape EntityType="KinderPingviModel.DiskS" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinderPingviModel.ItemOrder" Width="1.5" PointX="11" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinderPingviModel.Items" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinderPingviModel.Orders" Width="1.5" PointX="8.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinderPingviModel.PriceList" Width="1.5" PointX="11.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinderPingviModel.PriceListOrder" Width="1.5" PointX="13.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinderPingviModel.Roles" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinderPingviModel.TypeItems" Width="1.5" PointX="8.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinderPingviModel.TypeOrders" Width="1.5" PointX="6" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinderPingviModel.Users" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <AssociationConnector Association="KinderPingviModel.FK_DiskS_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="KinderPingviModel.FK_ItemOrder_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="KinderPingviModel.FK_ItemOrder_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="KinderPingviModel.FK_ItemOrder_TypeItems" ManuallyRouted="false" />
+        <AssociationConnector Association="KinderPingviModel.FK_Orders_TypeOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="KinderPingviModel.FK_Orders_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="KinderPingviModel.FK_Orders_Users1" ManuallyRouted="false" />
+        <AssociationConnector Association="KinderPingviModel.FK_PriceListOrder_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="KinderPingviModel.FK_PriceListOrder_PriceList" ManuallyRouted="false" />
+        <AssociationConnector Association="KinderPingviModel.FK_Users_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
