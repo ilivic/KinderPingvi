@@ -22,16 +22,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Items">
-      <EntityTypeMapping TypeName="KinderPingviModel.Items">
-        <MappingFragment StoreEntitySet="Items">
-          <ScalarProperty Name="Id_item" ColumnName="Id_item" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Photo" ColumnName="Photo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="KinderPingviModel.Orders">
         <MappingFragment StoreEntitySet="Orders">
@@ -41,16 +31,6 @@
           <ScalarProperty Name="User_id_Client" ColumnName="User_id_Client" />
           <ScalarProperty Name="User_id_Worker" ColumnName="User_id_Worker" />
           <ScalarProperty Name="TypeOrder_id" ColumnName="TypeOrder_id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PriceList">
-      <EntityTypeMapping TypeName="KinderPingviModel.PriceList">
-        <MappingFragment StoreEntitySet="PriceList">
-          <ScalarProperty Name="id_Price" ColumnName="id_Price" />
-          <ScalarProperty Name="title" ColumnName="title" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="photo" ColumnName="photo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -95,6 +75,26 @@
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Role_id" ColumnName="Role_id" />
           <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="KinderPingviModel.Items">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id_item" ColumnName="Id_item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PriceList">
+      <EntityTypeMapping TypeName="KinderPingviModel.PriceList">
+        <MappingFragment StoreEntitySet="PriceList">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="id_Price" ColumnName="id_Price" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

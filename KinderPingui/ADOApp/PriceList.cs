@@ -21,9 +21,9 @@ namespace KinderPingui.ADOApp
         }
     
         public int id_Price { get; set; }
-        public string title { get; set; }
+        public string Title { get; set; }
         public int Price { get; set; }
-        public byte[] photo { get; set; }
+        public byte[] Photo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PriceListOrder> PriceListOrder { get; set; }

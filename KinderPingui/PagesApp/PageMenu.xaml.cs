@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,26 @@ namespace KinderPingui.PagesApp
         public PageMenu()
         {
             InitializeComponent();
+        }
+
+        private void ClickAnotherInfomation(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("что-то на пингвинском \n Нихуя не понятно", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void ClickAddNewItemOrService(object sender, RoutedEventArgs e)
+        {
+            MainNavigationFrame.NavigationService.Navigate(new PageAddItemsOrService());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainNavigationFrame.NavigationService.Navigate(new PageShowInemsAndService());
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Process.Start("cmd.exe", @"/k index.html && exit"); 
         }
     }
 }

@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>0dd98e5a0ecc5e07d7695dd72c4892ad.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -64,11 +67,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="PagesApp\PageAddItemsOrService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PagesApp\PageAuthorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PagesApp\PageMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesApp\PageShowInemsAndService.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,11 +137,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ClassApp\CorrUserClass.cs" />
+    <Compile Include="ClassApp\CostTAbletClass.cs" />
+    <Compile Include="PagesApp\PageAddItemsOrService.xaml.cs">
+      <DependentUpon>PageAddItemsOrService.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PagesApp\PageAuthorization.xaml.cs">
       <DependentUpon>PageAuthorization.xaml</DependentUpon>
     </Compile>
     <Compile Include="PagesApp\PageMenu.xaml.cs">
       <DependentUpon>PageMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesApp\PageShowInemsAndService.xaml.cs">
+      <DependentUpon>PageShowInemsAndService.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowsApp\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -171,8 +189,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Folder Include="FormInput\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="0dd98e5a0ecc5e07d7695dd72c4892ad.ico" />
     <Content Include="ADOApp\ModelKinder.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelKinder.Context.cs</LastGenOutput>
@@ -183,6 +204,7 @@
       <DependentUpon>ModelKinder.edmx</DependentUpon>
       <LastGenOutput>ModelKinder.cs</LastGenOutput>
     </Content>
+    <Resource Include="ResApp\0dd98e5a0ecc5e07d7695dd72c4892ad.ico" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

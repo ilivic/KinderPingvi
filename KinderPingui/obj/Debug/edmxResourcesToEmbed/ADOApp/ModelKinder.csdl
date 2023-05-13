@@ -19,19 +19,9 @@
     <Property Name="Order_id" Type="Int32" Nullable="false" />
     <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="TypeItems_id" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Items" Relationship="Self.FK_ItemOrder_Items" FromRole="ItemOrder" ToRole="Items" />
     <NavigationProperty Name="Orders" Relationship="Self.FK_ItemOrder_Orders" FromRole="ItemOrder" ToRole="Orders" />
     <NavigationProperty Name="TypeItems" Relationship="Self.FK_ItemOrder_TypeItems" FromRole="ItemOrder" ToRole="TypeItems" />
-  </EntityType>
-  <EntityType Name="Items">
-    <Key>
-      <PropertyRef Name="Id_item" />
-    </Key>
-    <Property Name="Id_item" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Price" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
-    <NavigationProperty Name="ItemOrder" Relationship="Self.FK_ItemOrder_Items" FromRole="Items" ToRole="ItemOrder" />
+    <NavigationProperty Name="Items" Relationship="KinderPingviModel.FK_ItemOrder_Items" FromRole="ItemOrder" ToRole="Items" />
   </EntityType>
   <EntityType Name="Orders">
     <Key>
@@ -49,16 +39,6 @@
     <NavigationProperty Name="Users1" Relationship="Self.FK_Orders_Users1" FromRole="Orders" ToRole="Users" />
     <NavigationProperty Name="PriceListOrder" Relationship="Self.FK_PriceListOrder_Orders" FromRole="Orders" ToRole="PriceListOrder" />
   </EntityType>
-  <EntityType Name="PriceList">
-    <Key>
-      <PropertyRef Name="id_Price" />
-    </Key>
-    <Property Name="id_Price" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Price" Type="Int32" Nullable="false" />
-    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
-    <NavigationProperty Name="PriceListOrder" Relationship="Self.FK_PriceListOrder_PriceList" FromRole="PriceList" ToRole="PriceListOrder" />
-  </EntityType>
   <EntityType Name="PriceListOrder">
     <Key>
       <PropertyRef Name="id_PriceOrder" />
@@ -68,7 +48,7 @@
     <Property Name="Price_id" Type="Int32" Nullable="false" />
     <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
     <NavigationProperty Name="Orders" Relationship="Self.FK_PriceListOrder_Orders" FromRole="PriceListOrder" ToRole="Orders" />
-    <NavigationProperty Name="PriceList" Relationship="Self.FK_PriceListOrder_PriceList" FromRole="PriceListOrder" ToRole="PriceList" />
+    <NavigationProperty Name="PriceList" Relationship="KinderPingviModel.FK_PriceListOrder_PriceList" FromRole="PriceListOrder" ToRole="PriceList" />
   </EntityType>
   <EntityType Name="Roles">
     <Key>
@@ -116,18 +96,6 @@
       </Principal>
       <Dependent Role="DiskS">
         <PropertyRef Name="User_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ItemOrder_Items">
-    <End Role="Items" Type="Self.Items" Multiplicity="1" />
-    <End Role="ItemOrder" Type="Self.ItemOrder" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Items">
-        <PropertyRef Name="Id_item" />
-      </Principal>
-      <Dependent Role="ItemOrder">
-        <PropertyRef Name="Item_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -203,18 +171,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PriceListOrder_PriceList">
-    <End Role="PriceList" Type="Self.PriceList" Multiplicity="1" />
-    <End Role="PriceListOrder" Type="Self.PriceListOrder" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="PriceList">
-        <PropertyRef Name="id_Price" />
-      </Principal>
-      <Dependent Role="PriceListOrder">
-        <PropertyRef Name="Price_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Users_Roles">
     <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
     <End Role="Users" Type="Self.Users" Multiplicity="*" />
@@ -230,9 +186,7 @@
   <EntityContainer Name="KinderPingviEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="DiskS" EntityType="Self.DiskS" />
     <EntitySet Name="ItemOrder" EntityType="Self.ItemOrder" />
-    <EntitySet Name="Items" EntityType="Self.Items" />
     <EntitySet Name="Orders" EntityType="Self.Orders" />
-    <EntitySet Name="PriceList" EntityType="Self.PriceList" />
     <EntitySet Name="PriceListOrder" EntityType="Self.PriceListOrder" />
     <EntitySet Name="Roles" EntityType="Self.Roles" />
     <EntitySet Name="TypeItems" EntityType="Self.TypeItems" />
@@ -241,10 +195,6 @@
     <AssociationSet Name="FK_DiskS_Users" Association="Self.FK_DiskS_Users">
       <End Role="Users" EntitySet="Users" />
       <End Role="DiskS" EntitySet="DiskS" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ItemOrder_Items" Association="Self.FK_ItemOrder_Items">
-      <End Role="Items" EntitySet="Items" />
-      <End Role="ItemOrder" EntitySet="ItemOrder" />
     </AssociationSet>
     <AssociationSet Name="FK_ItemOrder_Orders" Association="Self.FK_ItemOrder_Orders">
       <End Role="Orders" EntitySet="Orders" />
@@ -270,13 +220,63 @@
       <End Role="Orders" EntitySet="Orders" />
       <End Role="PriceListOrder" EntitySet="PriceListOrder" />
     </AssociationSet>
-    <AssociationSet Name="FK_PriceListOrder_PriceList" Association="Self.FK_PriceListOrder_PriceList">
-      <End Role="PriceList" EntitySet="PriceList" />
-      <End Role="PriceListOrder" EntitySet="PriceListOrder" />
-    </AssociationSet>
     <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
       <End Role="Roles" EntitySet="Roles" />
       <End Role="Users" EntitySet="Users" />
     </AssociationSet>
+    <EntitySet Name="Items" EntityType="KinderPingviModel.Items" />
+    <AssociationSet Name="FK_ItemOrder_Items" Association="KinderPingviModel.FK_ItemOrder_Items">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="ItemOrder" EntitySet="ItemOrder" />
+    </AssociationSet>
+    <EntitySet Name="PriceList" EntityType="KinderPingviModel.PriceList" />
+    <AssociationSet Name="FK_PriceListOrder_PriceList" Association="KinderPingviModel.FK_PriceListOrder_PriceList">
+      <End Role="PriceList" EntitySet="PriceList" />
+      <End Role="PriceListOrder" EntitySet="PriceListOrder" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="Id_item" />
+    </Key>
+    <Property Name="Id_item" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Photo" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="ItemOrder" Relationship="KinderPingviModel.FK_ItemOrder_Items" FromRole="Items" ToRole="ItemOrder" />
+  </EntityType>
+  <Association Name="FK_ItemOrder_Items">
+    <End Type="KinderPingviModel.Items" Role="Items" Multiplicity="1" />
+    <End Type="KinderPingviModel.ItemOrder" Role="ItemOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="Id_item" />
+      </Principal>
+      <Dependent Role="ItemOrder">
+        <PropertyRef Name="Item_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PriceList">
+    <Key>
+      <PropertyRef Name="id_Price" />
+    </Key>
+    <Property Name="id_Price" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Photo" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="PriceListOrder" Relationship="KinderPingviModel.FK_PriceListOrder_PriceList" FromRole="PriceList" ToRole="PriceListOrder" />
+  </EntityType>
+  <Association Name="FK_PriceListOrder_PriceList">
+    <End Type="KinderPingviModel.PriceList" Role="PriceList" Multiplicity="1" />
+    <End Type="KinderPingviModel.PriceListOrder" Role="PriceListOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceList">
+        <PropertyRef Name="id_Price" />
+      </Principal>
+      <Dependent Role="PriceListOrder">
+        <PropertyRef Name="Price_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

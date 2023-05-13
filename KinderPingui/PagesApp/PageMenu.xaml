@@ -9,6 +9,23 @@
       Title="PageMenu">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Button Content="Добавить продукцию" Click="ClickAddNewItemOrService"/>
+            <Button Content="Просмотреть номенклатуру" Click="Button_Click"/>
+            <Button Content="Информация" Click="ClickAnotherInfomation"/>
+            <Button Content="Сообщить об ошибке" Click="Button_Click_1"/>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="2" Grid.Column="1">
+            <Frame x:Name="MainNavigationFrame" NavigationUIVisibility="Hidden"/>
+        </StackPanel>
     </Grid>
 </Page>

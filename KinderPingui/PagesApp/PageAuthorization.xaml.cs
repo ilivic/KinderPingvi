@@ -25,10 +25,14 @@ namespace KinderPingui.PagesApp
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Метод Авторизации получаемое значение запись пользователя в базе данных передаётся в класс "CorrUser" 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickAuthorization(object sender, RoutedEventArgs e)
         {
-            var DataUser = App.Connection.Users.Where(z=>z.Code == int.Parse(TxtCode.Text)).FirstOrDefault();
+            var DataUser = App.Connection.Users.Where(z=>z.Code.ToString() == TxtCode.Text).FirstOrDefault();
             if (DataUser != null)
             {
                 if (DataUser.Role_id == 1)
@@ -38,12 +42,12 @@ namespace KinderPingui.PagesApp
                 }
                 else 
                 {
-                    MessageBox.Show("");
+                    MessageBox.Show("Плавником по ебалу не хочешь?! тебе сюда НеЗя", "Код Красный", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             else
             {
-                MessageBox.Show("");   
+                MessageBox.Show("Тебя нет в системе","Код Красный", MessageBoxButton.OK, MessageBoxImage.Information);   
             }
         }
     }

@@ -25,7 +25,7 @@
     </Key>
     <Property Name="Id_item" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Price" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
     <Property Name="Photo" Type="image" Nullable="false" />
   </EntityType>
   <EntityType Name="Orders">
@@ -44,9 +44,9 @@
       <PropertyRef Name="id_Price" />
     </Key>
     <Property Name="id_Price" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Price" Type="int" Nullable="false" />
-    <Property Name="photo" Type="image" Nullable="false" />
+    <Property Name="Photo" Type="image" Nullable="false" />
   </EntityType>
   <EntityType Name="PriceListOrder">
     <Key>

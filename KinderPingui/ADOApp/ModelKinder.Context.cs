@@ -27,13 +27,13 @@ namespace KinderPingui.ADOApp
     
         public virtual DbSet<DiskS> DiskS { get; set; }
         public virtual DbSet<ItemOrder> ItemOrder { get; set; }
-        public virtual DbSet<Items> Items { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
-        public virtual DbSet<PriceList> PriceList { get; set; }
         public virtual DbSet<PriceListOrder> PriceListOrder { get; set; }
         public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<TypeItems> TypeItems { get; set; }
         public virtual DbSet<TypeOrders> TypeOrders { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Items> Items { get; set; }
+        public virtual DbSet<PriceList> PriceList { get; set; }
     }
 }

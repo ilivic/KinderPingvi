@@ -20,8 +20,8 @@ namespace KinderPingui.ADOApp
         public System.DateTime Date { get; set; }
         public int TypeItems_id { get; set; }
     
-        public virtual Items Items { get; set; }
         public virtual Orders Orders { get; set; }
         public virtual TypeItems TypeItems { get; set; }
+        public virtual Items Items { get; set; }
     }
 }
