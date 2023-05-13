@@ -1,0 +1,20 @@
+﻿<Page x:Class="PingvinAdmin.PageApp.PageAddNewWorker"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PingvinAdmin.PageApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAddNewWorker">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="имя сотрудника"/>
+            <TextBox x:Name="TxtName" ToolTip="имя сотрудника"/>
+            <TextBlock Text="код сотрудника"/>
+            <TextBox x:Name="TxtCode" ToolTip="код сотрудника"/>
+            <Button Content="Добавить" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

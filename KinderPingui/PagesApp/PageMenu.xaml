@@ -10,12 +10,12 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel>
@@ -25,7 +25,7 @@
             <Button Content="Сообщить об ошибке" Click="Button_Click_1"/>
         </StackPanel>
         <StackPanel Grid.RowSpan="2" Grid.Column="1">
-            <Frame x:Name="MainNavigationFrame" NavigationUIVisibility="Hidden"/>
+            <Frame x:Name="MainNavigationFrame" NavigationUIVisibility="Hidden"  Width="560" Height="400"/>
         </StackPanel>
     </Grid>
 </Page>

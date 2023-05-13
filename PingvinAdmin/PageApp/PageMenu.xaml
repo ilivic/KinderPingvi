@@ -1,0 +1,38 @@
+﻿<Page x:Class="PingvinAdmin.PageApp.PageMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PingvinAdmin.PageApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageMenu">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+        <Menu Background="Transparent">
+                <MenuItem Header="Отчётность" Margin="0">
+                    <MenuItem Header="По услугам" Click="MenuItem_Click"/>
+                    <MenuItem Header="По Товарам" Click="MenuItem_Click_1"/>
+                    <MenuItem Header="По Заявкам" Click="MenuItem_Click_2"/>
+                </MenuItem>
+                <MenuItem Header="Люди">
+                    <MenuItem Header="Сотрудники" Click="MenuItem_Click_3"/>
+                    <MenuItem Header="Клиенты" Click="MenuItem_Click_4"/>
+                </MenuItem>
+                <MenuItem Header="Добавление">
+                    <MenuItem Header="Добавть Мастера" Click="MenuItem_Click_5"/>
+                    <MenuItem Header="Добавить Клиента" Click="MenuItem_Click_6"/>
+                    <MenuItem Header="Добавить Менеджера" Click="MenuItem_Click_7"/>
+                </MenuItem>
+
+            </Menu>
+        </StackPanel>
+        <Frame x:Name="MainNavigationFrame" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+
+    </Grid>
+</Page>

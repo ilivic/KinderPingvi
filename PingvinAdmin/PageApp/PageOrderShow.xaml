@@ -1,0 +1,25 @@
+﻿<Page x:Class="PingvinAdmin.PageApp.PageOrderShow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PingvinAdmin.PageApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageOrderShow">
+
+    <Grid>
+        <ListView x:Name="ListOrder">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Title,StringFormat='Заявка: {0}'}"/>
+                        <TextBlock Text="{Binding Users.Name ,StringFormat='Клиент: {0}'}"/>
+                        <TextBlock Text="{Binding Users1.Name ,StringFormat='Мастер: {0}'}"/>
+                        <TextBlock Text="{Binding Price_id ,StringFormat='Стоимость: {0}'}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>  
+    </Grid>
+</Page>

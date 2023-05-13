@@ -1,0 +1,33 @@
+﻿<Page x:Class="PingviKL.PagesApp.PageByProd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PingviKL.PagesApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageByProd">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="ListProd" SelectionChanged="ListProd_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image Source="{Binding Photo}" Width="90" Height="100"/>
+                        <TextBlock Text="{Binding Price, StringFormat='Стоимость{0}'}"/>
+                        <TextBlock Text="{Binding Title, StringFormat='Название{0}'}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Grid.Row="1">
+            <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="Border_MouseDown">
+                <TextBlock HorizontalAlignment="Center" Text="revers"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

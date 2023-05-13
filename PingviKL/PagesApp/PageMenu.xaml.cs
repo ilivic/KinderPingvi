@@ -34,5 +34,15 @@ namespace PingviKL.PagesApp
         {
             NavigationService.Navigate(new PageNewOrder());
         }
+
+        private void Border_MouseDown_2(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new PageByProd());
+        }
+
+        private void Border_MouseDown_3(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Попрежнему Нихуя не понятно","Информация",MessageBoxButton.OK,MessageBoxImage.Information);
+        }
     }
 }

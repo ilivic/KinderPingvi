@@ -8,12 +8,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageShowInemsAndService">
 
-    <Grid>
+    <Grid Width="550" Height="350">
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
             <ComboBox Width="150" x:Name="CMB" SelectionChanged="ComboBox_SelectionChanged">
                 <TextBlock Text="Предметы" Foreground="Black" />
                 <TextBlock Text="Услуги" Foreground="Black" />
@@ -23,16 +23,12 @@
             <Button Content="↑" Click="Button_Click"/>
             <Button Content="↓" Click="Button_Click_1"/>
         </StackPanel>
-        <ListView x:Name="ListPriceAndItems" Grid.Row="1" Width="650" Height="400">
-            <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <UniformGrid Columns="2"/>
-                </ItemsPanelTemplate>
-            </ListView.ItemsPanel>
+
+        <ListView x:Name="ListPriceAndItems" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="{Binding Photo}" Width="150" Height="150"/>
+                        <Image Source="{Binding Photo}" Width="90" Height="90"/>
                         <TextBlock Text="{Binding Title}"/>
                         <TextBlock Text="{Binding Price}"/>
                     </StackPanel>

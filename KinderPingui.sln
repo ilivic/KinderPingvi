@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingvinMaster", "PingvinMas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingviKL", "PingviKL\PingviKL.csproj", "{87DFD4FA-BE81-4465-8B5C-204B0025CD80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingvinAdmin", "PingvinAdmin\PingvinAdmin.csproj", "{49F6AE6E-738D-4F4B-A434-7C6991D74AE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{87DFD4FA-BE81-4465-8B5C-204B0025CD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87DFD4FA-BE81-4465-8B5C-204B0025CD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87DFD4FA-BE81-4465-8B5C-204B0025CD80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F6AE6E-738D-4F4B-A434-7C6991D74AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F6AE6E-738D-4F4B-A434-7C6991D74AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F6AE6E-738D-4F4B-A434-7C6991D74AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F6AE6E-738D-4F4B-A434-7C6991D74AE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

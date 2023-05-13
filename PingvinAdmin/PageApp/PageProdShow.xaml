@@ -1,0 +1,24 @@
+﻿<Page x:Class="PingvinAdmin.PageApp.PageProdShow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PingvinAdmin.PageApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageProdShow">
+
+    <Grid>
+        <ListView x:Name="ListProd">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding PriceList.Title}"/>
+                        <Image Width="90" Height="90" Source="{Binding PriceList.Photo}"/>
+                        <TextBlock Text="{Binding Date}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

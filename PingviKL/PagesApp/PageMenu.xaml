@@ -14,13 +14,10 @@
         <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="Border_MouseDown_1">
                 <TextBlock HorizontalAlignment="Center" Text="Подать Заявку"/>
             </Border>
-            <Border CornerRadius="25" BorderBrush="White" BorderThickness="1">
-                <TextBlock HorizontalAlignment="Center" Text="Купить Вещь"/>
-            </Border>
-            <Border CornerRadius="25" BorderBrush="White" BorderThickness="1">
-                <TextBlock HorizontalAlignment="Center" Text="Мой Аккаунт"/>
-            </Border>
-            <Border CornerRadius="25" BorderBrush="White" BorderThickness="1">
+                <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="Border_MouseDown_2">
+                    <TextBlock HorizontalAlignment="Center" Text="Купить Вещь"/>
+                </Border>
+                <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="Border_MouseDown_3">
                 <TextBlock HorizontalAlignment="Center" Text="Информация"/>
             </Border>
             </StackPanel>

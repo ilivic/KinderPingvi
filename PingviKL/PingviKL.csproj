@@ -71,6 +71,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PagesApp\PageByProd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PagesApp\PageMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,6 +139,9 @@
     <Compile Include="ClassApp\CorrUserClass.cs" />
     <Compile Include="PagesApp\PageAuthorization.xaml.cs">
       <DependentUpon>PageAuthorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesApp\PageByProd.xaml.cs">
+      <DependentUpon>PageByProd.xaml</DependentUpon>
     </Compile>
     <Compile Include="PagesApp\PageMenu.xaml.cs">
       <DependentUpon>PageMenu.xaml</DependentUpon>

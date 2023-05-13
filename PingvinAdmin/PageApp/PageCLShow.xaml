@@ -1,0 +1,24 @@
+﻿<Page x:Class="PingvinAdmin.PageApp.PageCLShow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PingvinAdmin.PageApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageCLShow">
+
+    <Grid>
+        <ListView x:Name="ListUser">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding UserName, StringFormat='Имя {0}'}"/>
+                        <TextBlock Text="{Binding CountAll, StringFormat='Количество Заявок {0}'}"/>
+                        <TextBlock Text="{Binding CountDisk, StringFormat='Количество Заявок в бонусе {0}'}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
