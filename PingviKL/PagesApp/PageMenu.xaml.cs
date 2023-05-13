@@ -24,5 +24,15 @@ namespace PingviKL.PagesApp
         {
             InitializeComponent();
         }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
+
+        private void Border_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new PageNewOrder());
+        }
     }
 }

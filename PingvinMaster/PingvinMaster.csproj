@@ -67,6 +67,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PagesApp\PageDefault.xaml.cs">
+      <DependentUpon>PageDefault.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesApp\PageShowAllCl.xaml.cs">
+      <DependentUpon>PageShowAllCl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsApp\WindowChTask.xaml.cs">
+      <DependentUpon>WindowChTask.xaml</DependentUpon>
+    </Compile>
     <Page Include="PagesApp\PageAllTask.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -75,7 +84,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PagesApp\PageDefault.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PagesApp\PageMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesApp\PageMyTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesApp\PageShowAllCl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,10 +163,17 @@
     <Compile Include="PagesApp\PageMenu.xaml.cs">
       <DependentUpon>PageMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PagesApp\PageMyTask.xaml.cs">
+      <DependentUpon>PageMyTask.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowsApp\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WindowsApp\WindowChTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

@@ -26,14 +26,29 @@ namespace PingvinMaster.PagesApp
             InitializeComponent();
         }
 
-        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        private void ClickShowAllTask(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageAllTask());
         }
 
-        private void ToggleButton_Click_1(object sender, RoutedEventArgs e)
+        private void ClikcInputInfo(object sender, RoutedEventArgs e)
         {
             Process.Start("cmd.exe", @"/k index.html && exit");
+        }
+
+        private void ClickMyTask(object sender, RoutedEventArgs e)
+        {
+            MainNavigationFrame.NavigationService.Navigate(new PageMyTask());
+        }
+
+        private void ClickRefresh(object sender, RoutedEventArgs e)
+        {
+            MainNavigationFrame.NavigationService.Navigate(new PageDefault());
+        }
+
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainNavigationFrame.NavigationService.Navigate(new PageShowAllCl());
         }
     }
 }

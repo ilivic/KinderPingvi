@@ -14,22 +14,26 @@
         </Grid.RowDefinitions>
         <TabPanel>
             <ToolBar Padding="10" Background="Transparent">
-                <ToggleButton Click="ToggleButton_Click">
+                <ToggleButton Click="ClickShowAllTask">
                     <Image ToolTip="Все Заявки" Source="/ResApp/Без названия.jpg" Width="50" Height="50"/>
                 </ToggleButton>
-                <ToggleButton>
+                <ToggleButton Click="ClickMyTask">
                     <Image ToolTip="Мои заяки" Source="/ResApp/14.jpg" Width="50" Height="50"/>
                 </ToggleButton>
-                <ToggleButton>
+                <ToggleButton Click="ToggleButton_Click">
                     <Image ToolTip="Клиенты" Source="/ResApp/Без названия (1).jpg" Width="50" Height="50"/>
                 </ToggleButton>
                 <ToggleButton>
                     <Image ToolTip="Информация" Source="/ResApp/informatciia-chto-takoe.jpg" Width="50" Height="50"/>
                 </ToggleButton>
-                <ToggleButton Click="ToggleButton_Click_1">
+                <ToggleButton Click="ClikcInputInfo">
                     <Image ToolTip="Обратная связь" Source="/ResApp/Без названия (2).jpg" Width="50" Height="50"/>
                 </ToggleButton>
+                <ToggleButton ToolTip="Обновить" Click="ClickRefresh" FontSize="11" Padding="5" FontStyle="Normal">
+                    RF
+                </ToggleButton>
             </ToolBar>
+         
         </TabPanel>
         <Frame Grid.Row="1" x:Name="MainNavigationFrame" NavigationUIVisibility="Hidden"/>
     </Grid>

@@ -9,6 +9,27 @@
       Title="PageMenu">
 
     <Grid>
-        
+        <StackPanel>
+            <StackPanel VerticalAlignment="Top">
+        <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="Border_MouseDown_1">
+                <TextBlock HorizontalAlignment="Center" Text="Подать Заявку"/>
+            </Border>
+            <Border CornerRadius="25" BorderBrush="White" BorderThickness="1">
+                <TextBlock HorizontalAlignment="Center" Text="Купить Вещь"/>
+            </Border>
+            <Border CornerRadius="25" BorderBrush="White" BorderThickness="1">
+                <TextBlock HorizontalAlignment="Center" Text="Мой Аккаунт"/>
+            </Border>
+            <Border CornerRadius="25" BorderBrush="White" BorderThickness="1">
+                <TextBlock HorizontalAlignment="Center" Text="Информация"/>
+            </Border>
+            </StackPanel>
+            
+            <StackPanel VerticalAlignment="Bottom">
+                <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="Border_MouseDown">
+                    <TextBlock Foreground="Red" HorizontalAlignment="Center" Text="выход"/>
+                </Border>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

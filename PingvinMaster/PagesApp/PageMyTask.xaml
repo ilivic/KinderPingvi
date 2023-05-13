@@ -1,0 +1,27 @@
+﻿<Page x:Class="PingvinMaster.PagesApp.PageMyTask"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PingvinMaster.PagesApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageMyTask">
+
+    <Grid>
+        <ListView x:Name="ListOrder">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Title}"/>
+                        <TextBlock Text="{Binding Users.Name}"/>
+                        <StackPanel Orientation="Vertical">
+                        <Button Content="реадктировать" Background="Blue" Click="ClickChOrder"/>
+                        <Button Content="закрыть" Background="Green" Click="ClickCloseOrder"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
