@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinderPingui", "KinderPingui\KinderPingui.csproj", "{0935F4D6-71F1-4601-8AE7-F1A13449D972}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingvinMaster", "PingvinMaster\PingvinMaster.csproj", "{4CB3EAEF-6A45-4FA3-9B60-68A45EC70697}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingviKL", "PingviKL\PingviKL.csproj", "{87DFD4FA-BE81-4465-8B5C-204B0025CD80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0935F4D6-71F1-4601-8AE7-F1A13449D972}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0935F4D6-71F1-4601-8AE7-F1A13449D972}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0935F4D6-71F1-4601-8AE7-F1A13449D972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB3EAEF-6A45-4FA3-9B60-68A45EC70697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB3EAEF-6A45-4FA3-9B60-68A45EC70697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB3EAEF-6A45-4FA3-9B60-68A45EC70697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB3EAEF-6A45-4FA3-9B60-68A45EC70697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87DFD4FA-BE81-4465-8B5C-204B0025CD80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87DFD4FA-BE81-4465-8B5C-204B0025CD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87DFD4FA-BE81-4465-8B5C-204B0025CD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87DFD4FA-BE81-4465-8B5C-204B0025CD80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
