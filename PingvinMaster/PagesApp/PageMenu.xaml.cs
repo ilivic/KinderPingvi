@@ -25,27 +25,47 @@ namespace PingvinMaster.PagesApp
         {
             InitializeComponent();
         }
-
+       /// <summary>
+       /// метод навигации
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void ClickShowAllTask(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageAllTask());
         }
-
+        /// <summary>
+        /// метод открытия формы обратной связи с разработчиком
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClikcInputInfo(object sender, RoutedEventArgs e)
         {
             Process.Start("cmd.exe", @"/k index.html && exit");
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickMyTask(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageMyTask());
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickRefresh(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageDefault());
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickShowAllKL(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageShowAllCl());

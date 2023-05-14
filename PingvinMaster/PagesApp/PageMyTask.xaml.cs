@@ -23,14 +23,24 @@ namespace PingvinMaster.PagesApp
     /// </summary>
     public partial class PageMyTask : Page
     {
+        /// <summary>
+        /// публичный лист с информацией о заявках прикреплённых к авторизовавшемуся мастеру
+        /// </summary>
         public static List<Orders> ListOrd { get; set; }
+        /// <summary>
+        /// метод иниализации и заполнения данными о заявках прикреплённых к авторизовавшемуся мастеру
+        /// </summary>
         public PageMyTask()
         {
             InitializeComponent();
             ListOrd = new List<Orders>(App.Connection.Orders.Where(z => z.User_id_Worker == CorrUserClass.CorrUser.Id_User && z.Price_id == 0).ToList());
             ListOrder.ItemsSource = ListOrd;
         }
-
+        /// <summary>
+        /// метод выборки заявки для редактирования и открытия нового окна
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickChOrder(object sender, RoutedEventArgs e)
         {
             if (ListOrder.SelectedItem != null)
@@ -41,7 +51,11 @@ namespace PingvinMaster.PagesApp
             }
             
         }
-
+        /// <summary>
+        /// Метод закрытия заявки с рассчётом стоимости и учётом скидки
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickCloseOrder(object sender, RoutedEventArgs e)
         {
             try
@@ -99,8 +113,6 @@ namespace PingvinMaster.PagesApp
                                 break;
                             }
                     }
-                   
-
                 }
                 else
                 {

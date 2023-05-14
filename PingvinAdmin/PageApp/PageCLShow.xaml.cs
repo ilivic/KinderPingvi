@@ -21,14 +21,22 @@ namespace PingvinAdmin.PageApp
     /// </summary>
     public partial class PageCLShow : Page
     {
+        /// <summary>
+        /// класс для сосздания специального списка клинта с количеством покупом в общем и в скидочной пирамиде
+        /// </summary>
         public class CountUser
         {
             public string UserName { get; set; }
             public int CountDisk { get; set; }
             public int CountAll { get; set; }
         }
-
+        /// <summary>
+        /// публичный лист для отображения 
+        /// </summary>
         public static List<CountUser> CountUserOrder { get; set; }
+        /// <summary>
+        /// метод инициализации и заполнения публичного листа по колмчеству покупок клиента
+        /// </summary>
         public PageCLShow()
         {
             InitializeComponent();

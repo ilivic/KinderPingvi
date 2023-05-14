@@ -21,6 +21,9 @@ namespace PingvinMaster
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// метод инициализации и навигации
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();

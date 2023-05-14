@@ -25,42 +25,74 @@ namespace PingvinAdmin.PageApp
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClicklShowService(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageProdShow());
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickShowItem(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageServiceShow());
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickShowOrder(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageOrderShow());
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickShowWorker(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageWorkerShow());
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickShowShowCL(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageCLShow());
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAddWorker(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageAddNewWorker());
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAddUser(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageAddCl());
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAddManager(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageAddManager());

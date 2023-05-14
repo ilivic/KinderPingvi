@@ -25,7 +25,11 @@ namespace PingvinAdmin.PageApp
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// метод добавления нового менеджера 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAddManager(object sender, RoutedEventArgs e)
         {
             if ((TxtCode.Text != "") && (TxtName.Text != ""))

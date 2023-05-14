@@ -20,13 +20,21 @@ namespace PingvinAdmin.PageApp
     /// </summary>
     public partial class PageWorkerShow : Page
     {
+        /// <summary>
+        /// класс для сосздания специального списка мастера с количеством оказанных услуг
+        /// </summary>
         public class UserCount
         {
             public string Name {get;set;}
             public int Count { get; set; }
         }
-
+        /// <summary>
+        /// публичный лист для отображения 
+        /// </summary>
         public static List<UserCount> CountUserOrder { get; set; }
+        /// <summary>
+        /// метод инициализации и заполнения публичного листа по колмчеству оказанных услуг мастера
+        /// </summary>
         public PageWorkerShow()
         {
             InitializeComponent();

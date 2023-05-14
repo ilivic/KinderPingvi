@@ -22,7 +22,13 @@ namespace KinderPingui.PagesApp
     /// </summary>
     public partial class PageShowInemsAndService : Page
     {
+        /// <summary>
+        /// публичный лист для вывода информации о товарах и услугах 
+        /// </summary>
         public static List<CostTAbletClass> ListAllInfo { get; set; }
+        /// <summary>
+        /// метод инициализации и заполнения данными
+        /// </summary>
         public PageShowInemsAndService()
         {
             InitializeComponent();
@@ -30,6 +36,9 @@ namespace KinderPingui.PagesApp
             DataInsert();
             ListPriceAndItems.ItemsSource = ListAllInfo;
         }
+        /// <summary>
+        /// метод заполнения специального списка объединяющего товары и услуги 
+        /// </summary>
         public void DataInsert()
         {
             foreach (var Index in App.Connection.Items.ToList())
@@ -53,22 +62,38 @@ namespace KinderPingui.PagesApp
                 ListAllInfo.Add(NewIndex);
             }
         }
-
+        /// <summary>
+        /// метод поиска по названию
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TextSerchPress(object sender, TextChangedEventArgs e)
         {
            ListPriceAndItems.ItemsSource = ListAllInfo.Where(z=> z.Title.Contains(TxtSerch.Text));
         }
-
+        /// <summary>
+        /// метод сортировки по возрастанию цены
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickOrderBy(object sender, RoutedEventArgs e)
         {
             ListPriceAndItems.ItemsSource = ListAllInfo.OrderBy(z => z.Price);
         }
-
+        /// <summary>
+        /// метод сортировки по убыванию цены
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickOrderByDisk(object sender, RoutedEventArgs e)
         {
             ListPriceAndItems.ItemsSource = ListAllInfo.OrderByDescending(z => z.Price);
         }
-
+        /// <summary>
+        /// метод фильтрующий информацию по типу
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EventFilter(object sender, SelectionChangedEventArgs e)
         {
             switch (CMB.SelectedIndex)

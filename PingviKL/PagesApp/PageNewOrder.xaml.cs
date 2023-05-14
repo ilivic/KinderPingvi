@@ -26,7 +26,11 @@ namespace PingviKL.PagesApp
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// метод добавления новой заявки 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAddNewOrder(object sender, RoutedEventArgs e)
         {
             try
@@ -50,7 +54,11 @@ namespace PingviKL.PagesApp
                 MessageBox.Show(ex.Message);
             }
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickGoBack(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();

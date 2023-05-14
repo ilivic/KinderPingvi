@@ -19,7 +19,9 @@ namespace PingvinAdmin.PageApp
     /// Логика взаимодействия для PageProdShow.xaml
     /// </summary>
     public partial class PageProdShow : Page
-    {
+    {/// <summary>
+     /// метод инициализации и вывода списка оказанных услуг  
+     /// </summary>
         public PageProdShow()
         {
             InitializeComponent();

@@ -25,6 +25,11 @@ namespace PingviKL.PagesApp
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Метод Авторизации получаемое значение запись пользователя в базе данных передаётся в класс "CorrUser" 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CliclAutorization(object sender, RoutedEventArgs e)
         {
             try
@@ -47,7 +52,6 @@ namespace PingviKL.PagesApp
                 {
                     MessageBox.Show("Пользователя не существует", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-
             }
             catch (Exception ex)
             {

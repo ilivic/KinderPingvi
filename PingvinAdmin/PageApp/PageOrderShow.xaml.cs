@@ -20,6 +20,9 @@ namespace PingvinAdmin.PageApp
     /// </summary>
     public partial class PageOrderShow : Page
     {
+        /// <summary>
+        /// метод инициализации и вывода списка выполненых заявок  
+        /// </summary>
         public PageOrderShow()
         {
             InitializeComponent();

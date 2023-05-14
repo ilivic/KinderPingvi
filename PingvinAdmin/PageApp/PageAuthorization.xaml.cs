@@ -25,6 +25,11 @@ namespace PingvinAdmin.PageApp
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// метод авторизаций 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickLogin(object sender, RoutedEventArgs e)
         {
             try

@@ -25,7 +25,11 @@ namespace PingvinMaster.PagesApp
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Метод Авторизации получаемое значение запись пользователя в базе данных передаётся в класс "CorrUser" 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAutorization(object sender, RoutedEventArgs e)
         {
             try

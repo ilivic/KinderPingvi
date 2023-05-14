@@ -22,17 +22,28 @@ namespace PingviKL.PagesApp
     /// </summary>
     public partial class PageByProd : Page
     {
+        /// <summary>
+        /// метод инициализации и заполнения данными из базы о товарах 
+        /// </summary>
         public PageByProd()
         {
             InitializeComponent();
             ListProd.ItemsSource = App.Connection.Items.ToList();
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             NavigationService.GoBack();
         }
-
+        /// <summary>
+        /// метод покупки товара с записью колличсетва покупок до скидки 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EvetByItem(object sender, SelectionChangedEventArgs e)
         {
             if (ListProd.SelectedItem != null)

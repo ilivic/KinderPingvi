@@ -20,6 +20,9 @@ namespace PingvinMaster.PagesApp
     /// </summary>
     public partial class PageShowAllCl : Page
     {
+        /// <summary>
+        /// метод иниализаций и заполениния информаций о скидке и клинте
+        /// </summary>
         public PageShowAllCl()
         {
             InitializeComponent();

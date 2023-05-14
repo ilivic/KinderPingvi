@@ -12,8 +12,12 @@ namespace PingvinAdmin
     /// <summary>
     /// Логика взаимодействия для App.xaml
     /// </summary>
+    /// 
     public partial class App : Application
     {
+    /// <summary>
+    /// Публичное обращение к базе данных
+    /// </summary>
         public static KinderPingviEntities Connection = new KinderPingviEntities();
     }
 }

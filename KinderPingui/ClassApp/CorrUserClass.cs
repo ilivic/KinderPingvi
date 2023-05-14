@@ -7,8 +7,14 @@ using KinderPingui.ADOApp;
 
 namespace KinderPingui.ClassApp
 {
+    /// <summary>
+    /// публичный класс для харения данных о авторизовавшемся пользователе
+    /// </summary>
     public class CorrUserClass
     {
+        /// <summary>
+        /// публичная переменная для хранения записи о авторизовавшемся пользователе
+        /// </summary>
         public static Users CorrUser { get; set; }
     }
 }

@@ -21,15 +21,25 @@ namespace PingvinMaster.PagesApp
     /// Логика взаимодействия для PageAllTask.xaml
     /// </summary>
     public partial class PageAllTask : Page
-    {
+    {   
+        /// <summary>
+        /// публичный лист с информацией о всех заявках
+        /// </summary>
         public static List<Orders> ListOrd { get; set; }
+        /// <summary>
+        /// метод инициализации и заполнения данными о заявках
+        /// </summary>
         public PageAllTask()
         {
             InitializeComponent();
             ListOrd = new List<Orders>(App.Connection.Orders.Where(z => z.Users1 == null).ToList());
             ListOrder.ItemsSource = ListOrd;
         }
-
+        /// <summary>
+        /// метод прикрепления заявки к авторизовавшемуся мастеру
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EventSelectOrder(object sender, SelectionChangedEventArgs e)
         {
             if (ListOrder.SelectedItem != null)

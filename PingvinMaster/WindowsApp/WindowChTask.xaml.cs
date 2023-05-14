@@ -20,7 +20,14 @@ namespace PingvinMaster.WindowsApp
     /// </summary>
     public partial class WindowChTask : Window
     {
+        /// <summary>
+        /// публичная переменная дублирцующая запись о выбранной заявки 
+        /// </summary>
         public static Orders SelOrder { get; set; }
+        /// <summary>
+        /// Метод инициализации и заполнения CMB данными из базы
+        /// </summary>
+        /// <param name="SelectOrder"> переменная содержащая запись выбранной заявки</param>
         public WindowChTask(Orders SelectOrder)
         {
             InitializeComponent();
@@ -29,7 +36,11 @@ namespace PingvinMaster.WindowsApp
             CMBNewItemType.ItemsSource = App.Connection.TypeItems.ToList();
             CMBNewOrder.ItemsSource = App.Connection.PriceList.ToList();
         }
-
+        /// <summary>
+        /// Метод Добавления товара к заявке 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAdditems(object sender, RoutedEventArgs e)
         {
             try
@@ -54,7 +65,11 @@ namespace PingvinMaster.WindowsApp
                 MessageBox.Show(ex.Message);
             }
         }
-
+        /// <summary>
+        /// Метод Добавления услуги к заявке 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAddPrice(object sender, RoutedEventArgs e)
         {
             try

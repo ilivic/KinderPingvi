@@ -23,40 +23,63 @@ namespace KinderPingui.PagesApp
     /// </summary>
     public partial class PageAddItemsOrService : Page
     {
+        /// <summary>
+        /// публичная переменная для хранения изображения
+        /// </summary>
         public static Byte[] image { get; set; }
         public PageAddItemsOrService()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// метод скрытия формы 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChItem_Checked(object sender, RoutedEventArgs e)
         {
             SKNewItem.Visibility = Visibility.Visible;
             SKNewService.Visibility = Visibility.Hidden;
             ChService.IsChecked = false;
         }
-
+        /// <summary>
+        /// метод скрытия формы 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChItem_Unchecked(object sender, RoutedEventArgs e)
         {
             SKNewItem.Visibility = Visibility.Hidden;
             SKNewService.Visibility = Visibility.Visible;
             ChService.IsChecked = true;
         }
-
+        /// <summary>
+        /// метод скрытия формы 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChService_Checked(object sender, RoutedEventArgs e)
         {
             SKNewItem.Visibility = Visibility.Hidden;
             SKNewService.Visibility = Visibility.Visible;
             ChItem.IsChecked = false;
         }
-
+        /// <summary>
+        /// метод скрытия формы 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChService_Unchecked(object sender, RoutedEventArgs e)
         {
             SKNewItem.Visibility = Visibility.Visible;
             SKNewService.Visibility = Visibility.Hidden;
             ChItem.IsChecked = true ;
         }
-
+        /// <summary>
+        /// метод выбора фото и преобразование его в byte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickSelectPhoto(object sender, RoutedEventArgs e)
         {
             try
@@ -78,7 +101,11 @@ namespace KinderPingui.PagesApp
                 MessageBox.Show(ex.Message);
             } 
         }
-
+        /// <summary>
+        /// метод добавления нового товара 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAddNewUtem(object sender, RoutedEventArgs e)
         {
             try
@@ -100,10 +127,13 @@ namespace KinderPingui.PagesApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            
+            }    
         }
-
+        /// <summary>
+        /// метод добавления новой услуги
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAddNewService(object sender, RoutedEventArgs e)
         {
             try
@@ -126,7 +156,6 @@ namespace KinderPingui.PagesApp
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
     }
 }

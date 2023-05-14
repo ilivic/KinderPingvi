@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace KinderPingui.ClassApp
 {
+    /// <summary>
+    /// класс для создания публичного листа м информациеи о товаре
+    /// </summary>
     public class CostTAbletClass
     {
         public string Title { get; set; }

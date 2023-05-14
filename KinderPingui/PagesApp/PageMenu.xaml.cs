@@ -25,22 +25,38 @@ namespace KinderPingui.PagesApp
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// метод вывода информации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAnotherInfomation(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("что-то на пингвинском \n Нихуя не понятно", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickAddNewItemOrService(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageAddItemsOrService());
         }
-
+        /// <summary>
+        /// метод навигации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickShowItemsAndservice(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageShowInemsAndService());
         }
-
+        /// <summary>
+        /// метод открытия формы обратной связи с разработчиком
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickMessageFoMe(object sender, RoutedEventArgs e)
         {
             Process.Start("cmd.exe", @"/k index.html && exit"); 
