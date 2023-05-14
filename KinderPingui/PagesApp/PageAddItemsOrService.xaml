@@ -10,27 +10,28 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="8*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="SKNewItem">
+        <StackPanel x:Name="SKNewItem" Visibility="Hidden">
             <TextBox x:Name="TxtTitleNeItem" ToolTip="Название"/>
             <TextBox x:Name="TxtPriceNewItem" ToolTip="Цена"/>
             <Button Content="SelectPhoto" Click="ClickSelectPhoto"/>
             <Button Content="SaveItem" Click="ClickAddNewUtem"/>
         </StackPanel>
-        <StackPanel Grid.Column="1" x:Name="SKNewService">
+        <StackPanel Grid.Column="1" x:Name="SKNewService" Visibility="Hidden">
             <TextBox x:Name="TxtNewService" ToolTip="Название"/>
             <TextBox x:Name="TxtNewPriceService" ToolTip="Цена"/>
             <Button Content="SelectPhoto" Click="ClickSelectPhoto"/>
             <Button Content="SaveServicer" Click="ClickAddNewService"/>
 
         </StackPanel>
-        <StackPanel Grid.Row="1">
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="3">
             <CheckBox Content="Новая Продукция" x:Name="ChItem" Checked="ChItem_Checked" Unchecked="ChItem_Unchecked"/>
             <CheckBox Content="Новая Услуга" x:Name="ChService"  Checked="ChService_Checked" Unchecked="ChService_Unchecked"/>
         </StackPanel>

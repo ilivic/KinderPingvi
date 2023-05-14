@@ -13,7 +13,7 @@
             <RowDefinition Height="8*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ListView x:Name="ListProd" SelectionChanged="ListProd_SelectionChanged">
+        <ListView x:Name="ListProd" SelectionChanged="EvetByItem">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

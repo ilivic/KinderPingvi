@@ -39,3 +39,7 @@ C:\Users\KOTIK\Desktop\KinderPingvi\PingvinAdmin\obj\Debug\PageApp\PageCLShow.g.
 C:\Users\KOTIK\Desktop\KinderPingvi\PingvinAdmin\obj\Debug\PageApp\PageCLShow.baml
 C:\Users\KOTIK\Desktop\KinderPingvi\PingvinAdmin\obj\Debug\PageApp\PageAddNewWorker.g.cs
 C:\Users\KOTIK\Desktop\KinderPingvi\PingvinAdmin\obj\Debug\PageApp\PageAddNewWorker.baml
+C:\Users\KOTIK\Desktop\KinderPingvi\PingvinAdmin\obj\Debug\PageApp\PageAddCl.g.cs
+C:\Users\KOTIK\Desktop\KinderPingvi\PingvinAdmin\obj\Debug\PageApp\PageAddManager.g.cs
+C:\Users\KOTIK\Desktop\KinderPingvi\PingvinAdmin\obj\Debug\PageApp\PageAddCl.baml
+C:\Users\KOTIK\Desktop\KinderPingvi\PingvinAdmin\obj\Debug\PageApp\PageAddManager.baml

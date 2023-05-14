@@ -30,7 +30,7 @@ namespace PingvinMaster.PagesApp
             ListOrder.ItemsSource = ListOrd;
         }
 
-        private void ListOrder_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void EventSelectOrder(object sender, SelectionChangedEventArgs e)
         {
             if (ListOrder.SelectedItem != null)
             {

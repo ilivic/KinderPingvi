@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.IO;
-using PingvinAdmin.ClassApp;
 using Microsoft.Win32;
 using System.Runtime.Remoting.Messaging;
 
@@ -27,29 +26,6 @@ namespace PingvinAdmin.PageApp
         {
             InitializeComponent();
             ListService.ItemsSource = App.Connection.ItemOrder.ToList();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //try
-            //{
-            //    OpenFileDialog dialog = new OpenFileDialog();
-            //    if (dialog.ShowDialog() == true) 
-            //    {
-            //    }
-            //    using (ClassExcel helper = new ClassExcel())
-            //    {
-            //        MessageBox.Show(dialog.FileName);
-            //        helper.Open(filePath: Path.Combine(Environment.CurrentDirectory, dialog.FileName))
-             //       foreach()
-            //{
-            //    helper.Set(column: "A", row: 1, data: "lksadklsajdkl");
-            //}
-            //            helper.Save();
-            //    }
-            //}
-            //catch (Exception ex) { MessageBox.Show(ex.Message); }
-
         }
     }
 }

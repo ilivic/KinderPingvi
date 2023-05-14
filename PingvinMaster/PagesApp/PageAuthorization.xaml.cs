@@ -26,7 +26,7 @@ namespace PingvinMaster.PagesApp
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ClickAutorization(object sender, RoutedEventArgs e)
         {
             try
             {

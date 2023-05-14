@@ -59,17 +59,17 @@ namespace KinderPingui.PagesApp
            ListPriceAndItems.ItemsSource = ListAllInfo.Where(z=> z.Title.Contains(TxtSerch.Text));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ClickOrderBy(object sender, RoutedEventArgs e)
         {
             ListPriceAndItems.ItemsSource = ListAllInfo.OrderBy(z => z.Price);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ClickOrderByDisk(object sender, RoutedEventArgs e)
         {
             ListPriceAndItems.ItemsSource = ListAllInfo.OrderByDescending(z => z.Price);
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void EventFilter(object sender, SelectionChangedEventArgs e)
         {
             switch (CMB.SelectedIndex)
             {

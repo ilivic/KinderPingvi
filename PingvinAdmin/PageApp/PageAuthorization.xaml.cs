@@ -25,7 +25,7 @@ namespace PingvinAdmin.PageApp
         {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ClickLogin(object sender, RoutedEventArgs e)
         {
             try
             {

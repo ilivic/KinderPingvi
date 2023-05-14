@@ -20,7 +20,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="1">
-            <TextBox x:Name="TxtCode"/>
+            <TextBlock Text="Input `Code` PLs"/>
+            <TextBox x:Name="TxtCode" ToolTip="Input `Code` PLs"/>
             <Button Content="Go" Click="ClickAuthorization"/>
         </StackPanel>
     </Grid>

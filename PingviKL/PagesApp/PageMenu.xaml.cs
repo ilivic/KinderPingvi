@@ -25,22 +25,22 @@ namespace PingviKL.PagesApp
             InitializeComponent();
         }
 
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        private void ClickExit(object sender, MouseButtonEventArgs e)
         {
             App.Current.Shutdown();
         }
 
-        private void Border_MouseDown_1(object sender, MouseButtonEventArgs e)
+        private void ClickCreateNewOrder(object sender, MouseButtonEventArgs e)
         {
             NavigationService.Navigate(new PageNewOrder());
         }
 
-        private void Border_MouseDown_2(object sender, MouseButtonEventArgs e)
+        private void ClickByItem(object sender, MouseButtonEventArgs e)
         {
             NavigationService.Navigate(new PageByProd());
         }
 
-        private void Border_MouseDown_3(object sender, MouseButtonEventArgs e)
+        private void ClickShowInfo(object sender, MouseButtonEventArgs e)
         {
             MessageBox.Show("Попрежнему Нихуя не понятно","Информация",MessageBoxButton.OK,MessageBoxImage.Information);
         }

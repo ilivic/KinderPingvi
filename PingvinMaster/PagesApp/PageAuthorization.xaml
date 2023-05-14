@@ -20,8 +20,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="Input `Code` PLs"/>
             <TextBox x:Name="TxtCode" ToolTip="Input `Code` PLs"/>
-            <Button Content="Go" Click="Button_Click"/>
+            <Button Content="Go" Click="ClickAutorization"/>
         </StackPanel>
     </Grid>
 </Page>

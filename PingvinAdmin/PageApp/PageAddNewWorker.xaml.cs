@@ -26,7 +26,7 @@ namespace PingvinAdmin.PageApp
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ClickAddWorker(object sender, RoutedEventArgs e)
         {
             if ((TxtCode.Text != "") && (TxtName.Text != ""))
             {

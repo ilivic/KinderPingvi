@@ -9,7 +9,7 @@
       Title="PageAllTask">
 
     <Grid>
-        <ListView x:Name="ListOrder" SelectionChanged="ListOrder_SelectionChanged">
+        <ListView x:Name="ListOrder" SelectionChanged="EventSelectOrder">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

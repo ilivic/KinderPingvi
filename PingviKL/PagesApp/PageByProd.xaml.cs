@@ -33,7 +33,7 @@ namespace PingviKL.PagesApp
             NavigationService.GoBack();
         }
 
-        private void ListProd_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void EvetByItem(object sender, SelectionChangedEventArgs e)
         {
             if (ListProd.SelectedItem != null)
             {

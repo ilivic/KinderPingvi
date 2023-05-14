@@ -11,19 +11,19 @@
     <Grid>
         <StackPanel>
             <StackPanel VerticalAlignment="Top">
-        <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="Border_MouseDown_1">
+        <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="ClickCreateNewOrder">
                 <TextBlock HorizontalAlignment="Center" Text="Подать Заявку"/>
             </Border>
-                <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="Border_MouseDown_2">
+                <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="ClickByItem">
                     <TextBlock HorizontalAlignment="Center" Text="Купить Вещь"/>
                 </Border>
-                <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="Border_MouseDown_3">
+                <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="ClickShowInfo">
                 <TextBlock HorizontalAlignment="Center" Text="Информация"/>
             </Border>
             </StackPanel>
             
             <StackPanel VerticalAlignment="Bottom">
-                <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="Border_MouseDown">
+                <Border CornerRadius="25" BorderBrush="White" BorderThickness="1" MouseDown="ClickExit">
                     <TextBlock Foreground="Red" HorizontalAlignment="Center" Text="выход"/>
                 </Border>
             </StackPanel>

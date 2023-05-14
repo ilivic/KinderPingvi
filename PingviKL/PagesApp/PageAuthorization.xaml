@@ -11,17 +11,18 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="2*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1" Grid.Column="1">
-            <TextBox x:Name="TxtCode"/>
-            <Button Content="Go" Click="Button_Click"/>
+            <TextBlock Text="Input `Code` PLs"/>
+            <TextBox x:Name="TxtCode" ToolTip="Input `Code` PLs"/>
+            <Button Content="Go" Click="CliclAutorization"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -26,42 +26,42 @@ namespace PingvinAdmin.PageApp
             InitializeComponent();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void ClicklShowService(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageProdShow());
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void ClickShowItem(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageServiceShow());
         }
 
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        private void ClickShowOrder(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageOrderShow());
         }
 
-        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        private void ClickShowWorker(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageWorkerShow());
         }
 
-        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        private void ClickShowShowCL(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageCLShow());
         }
 
-        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        private void ClickAddWorker(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageAddNewWorker());
         }
 
-        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        private void ClickAddUser(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageAddCl());
         }
 
-        private void MenuItem_Click_7(object sender, RoutedEventArgs e)
+        private void ClickAddManager(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageAddManager());
         }

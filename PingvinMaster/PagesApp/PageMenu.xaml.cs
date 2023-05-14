@@ -46,7 +46,7 @@ namespace PingvinMaster.PagesApp
             MainNavigationFrame.NavigationService.Navigate(new PageDefault());
         }
 
-        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        private void ClickShowAllKL(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageShowAllCl());
         }

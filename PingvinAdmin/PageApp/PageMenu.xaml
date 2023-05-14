@@ -16,18 +16,18 @@
         <StackPanel>
         <Menu Background="Transparent">
                 <MenuItem Header="Отчётность" Margin="0">
-                    <MenuItem Header="По услугам" Click="MenuItem_Click"/>
-                    <MenuItem Header="По Товарам" Click="MenuItem_Click_1"/>
-                    <MenuItem Header="По Заявкам" Click="MenuItem_Click_2"/>
+                    <MenuItem Header="По услугам" Click="ClicklShowService"/>
+                    <MenuItem Header="По Товарам" Click="ClickShowItem"/>
+                    <MenuItem Header="По Заявкам" Click="ClickShowOrder"/>
                 </MenuItem>
                 <MenuItem Header="Люди">
-                    <MenuItem Header="Сотрудники" Click="MenuItem_Click_3"/>
-                    <MenuItem Header="Клиенты" Click="MenuItem_Click_4"/>
+                    <MenuItem Header="Сотрудники" Click="ClickShowWorker"/>
+                    <MenuItem Header="Клиенты" Click="ClickShowShowCL"/>
                 </MenuItem>
                 <MenuItem Header="Добавление">
-                    <MenuItem Header="Добавть Мастера" Click="MenuItem_Click_5"/>
-                    <MenuItem Header="Добавить Клиента" Click="MenuItem_Click_6"/>
-                    <MenuItem Header="Добавить Менеджера" Click="MenuItem_Click_7"/>
+                    <MenuItem Header="Добавть Мастера" Click="ClickAddWorker"/>
+                    <MenuItem Header="Добавить Клиента" Click="ClickAddUser"/>
+                    <MenuItem Header="Добавить Менеджера" Click="ClickAddManager"/>
                 </MenuItem>
 
             </Menu>

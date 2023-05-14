@@ -24,6 +24,10 @@ namespace PingvinAdmin.PageApp
         public PageAddManager()
         {
             InitializeComponent();
+        }
+
+        private void ClickAddManager(object sender, RoutedEventArgs e)
+        {
             if ((TxtCode.Text != "") && (TxtName.Text != ""))
             {
                 Users NewUser = new Users()

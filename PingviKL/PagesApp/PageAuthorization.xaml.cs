@@ -25,7 +25,7 @@ namespace PingviKL.PagesApp
         {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CliclAutorization(object sender, RoutedEventArgs e)
         {
             try
             {

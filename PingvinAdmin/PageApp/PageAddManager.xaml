@@ -14,7 +14,7 @@
             <TextBox x:Name="TxtName" ToolTip="имя сотрудника"/>
             <TextBlock Text="код сотрудника"/>
             <TextBox x:Name="TxtCode" ToolTip="код сотрудника"/>
-            <Button Content="Добавить" Click="Button_Click"/>
+            <Button Content="Добавить" Click="ClickAddManager"/>
         </StackPanel>
     </Grid>
 </Page>

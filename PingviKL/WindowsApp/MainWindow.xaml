@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PingviKL"
         mc:Ignorable="d"
-        Title="Клиент" Height="450" Width="300">
+        Title="Клиент" Height="450" Width="300" ResizeMode="NoResize">
     <Grid>
-        <Frame x:Name="navigationFrame" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="navigationFrame" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>

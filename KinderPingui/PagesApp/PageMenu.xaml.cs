@@ -36,12 +36,12 @@ namespace KinderPingui.PagesApp
             MainNavigationFrame.NavigationService.Navigate(new PageAddItemsOrService());
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ClickShowItemsAndservice(object sender, RoutedEventArgs e)
         {
             MainNavigationFrame.NavigationService.Navigate(new PageShowInemsAndService());
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ClickMessageFoMe(object sender, RoutedEventArgs e)
         {
             Process.Start("cmd.exe", @"/k index.html && exit"); 
         }
